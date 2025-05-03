@@ -173,8 +173,7 @@ html, body{
       font-size: 1.5rem;
       max-width: 100%;
       margin: 10 auto;
-      display:flex;
-      flex-direction: column;
+      max-height: 100%;
     }
     #button2{
         width: 550px;
@@ -185,6 +184,12 @@ html, body{
     #navbarrrr{
         font-size: 2rem;
         padding: 10px;
+    }
+    #navbarrrrr{
+        font-size: 1.5rem;
+        width:auto;
+        text-align: center;
+        height:auto;
     }
     #oferta2{
         font-size: 3rem;
@@ -222,6 +227,12 @@ html, body{
     }
     #footer a{
         font-size: 1.7rem;
+    }
+    #main h1{
+        font-size: 2.5rem;
+    }
+    #main p{
+        font-size: 1.8rem;
     }
   }
   

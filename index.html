@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>EcoFlow</title>
+    <link rel="website icon" href="img/453410485_122159510768173002_812049489357826685_n.jpg">
+</head>
+<body>
+  <header id="home" class="relative bg-white overflow-hidden ">
+    <div class="absolute top-0 right-0 mt-4 mr-4 w-64 h-64 lg:w-96 lg:h-96 rounded-full overflow-hidden">
+      <img id="img"
+        src="img/tlo.jpeg"
+        alt=""
+        class="object-cover w-full h-full max-sm:hidden"
+      />
+    </div>
+    <nav id="navbar" class="relative container mx-auto flex justify-center items-center justify-between px-4 py-5">
+      <a href="#home" class="flex justify-center items-center space-x-2 z-10">
+        <img src="img/453410485_122159510768173002_812049489357826685_n.jpg" class="w-20">
+        <span class="text-2xl font-bold text-green-900">EcoFlow</span>
+      </a>
+      <div class="hidden lg:flex space-x-5 z-10">
+        <a href="#oferta" class="text-lg font-medium hover:text-green-600 transition bg-green-900 text-white px-4 py-1 rounded-md">Oferta</a>
+        <a href="#uslugi"     class="text-lg font-medium hover:text-green-600 transition bg-green-900 text-white px-4 py-1 rounded-md">Usługi</a>
+        <a href="#opiss"     class="text-lg font-medium hover:text-green-600 transition bg-green-900 text-white px-4 py-1 rounded-md">Dane Techniczne</a>
+        <a href="#myy"     class="text-lg font-medium hover:text-green-600 transition bg-green-900 text-white px-4 py-1 rounded-md">Dlaczego My</a>
+        <a href="#dojazd"    class="text-lg font-medium hover:text-green-600 transition bg-green-900 text-white px-4 py-1 rounded-md">Dojazd</a>
+        <a href="#footer"       class="text-lg font-medium hover:text-green-600 transition bg-green-900 text-white px-4 py-1 rounded-md">Kontakt</a>
+      </div>
+      <button
+        class="lg:hidden text-blue-900 focus:outline-none z-10"
+        onclick="toggleNavbar('mobile-menu')"
+      >
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden flex-col justify-center items-center flex-wrap gap-2 space-y-4 bg-white py-5 lg:hidden">
+      <a href="#oferta" class="text-lg font-medium hover:text-green-600 transition bg-green-900 text-white px-4 py-1 rounded-md">Oferta</a>
+      <a href="#uslugi"     class="text-lg font-medium hover:text-green-600 transition bg-green-900 text-white px-4 py-1 rounded-md">Usługi</a>
+      <a href="#myy"     class="text-lg font-medium hover:text-green-600 transition bg-green-900 text-white px-4 py-1 rounded-md">Dlaczego My</a>
+      <a href="#dojazd"    class="text-lg font-medium hover:text-green-600 transition bg-green-900 text-white px-4 py-1 rounded-md">Dojazd</a>
+      <a href="#footer"       class="text-lg font-medium hover:text-green-600 transition bg-green-900 text-white px-4 py-1 rounded-md">Kontakt</a>
+    </div>
+    <div id="header" class="relative container mx-auto px-4 pb-16 pt-20 text-center lg:text-left lg:pt-32 z-10 max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center max-md:flex max-md:flex-col max-md:justify-center max-md:items-center">
+      <img src="img/453410485_122159510768173002_812049489357826685_n.jpg" class="">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-green-900 leading-tight">
+        Nowoczesne systemy klimatyzacji<br />i pomp ciepła
+      </h1>
+      <p class="mt-4 text-lg text-gray-700 max-w-md mx-auto lg:mx-0">
+        Komfort przez cały rok:<br />
+        Ekologicznie i oszczędnie.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-4">
+        <a
+          href="#oferta"
+          class="inline-block px-6 py-3 bg-green-600 text-white font-semibold rounded shadow hover:bg-green-700 transition"
+        >
+          Sprawdź ofertę
+        </a>
+        <a
+          href="#uslugi"
+          class="inline-block px-6 py-3 border-2 border-green-600 text-green-600 font-semibold rounded hover:bg-green-50 transition"
+        >
+          Zobacz realizacje
+        </a>
+      </div>    
+    </div>
+    <div id="powrot" class="fixed bottom-5 right-5 z-50">
+      <a href="#home" class="bg-slate-100 p-4 rounded-full shadow-lg text-black text-2xl hover:bg-slate-200 transition">
+        <i class="fas fa-arrow-up"></i>
+      </a>
+    </div>
+  </header>
+  <div id="oferta" class="bg-slate-100 py-20 mt-60 reveal">
+    <div class="">
+      <h1 class="font-bold text-3xl text-center text-slate-500">Oferta:</h1>
+    </div>
+  </div>
+  <article id="articlee" class="flex justify-around items-start flex-wrap gap-2 py-3 reveal">
+    <div class="flex justify-around items-start flex-wrap gap-2 w-full py-32">
+      <div id="buttony" class="flex justify-center items-center flex-wrap gap-5">
+        <a id="button2" href="pompy.html" class="font-bold text-white bg-green-700 px-8 py-2 hover:bg-green-800 flex flex-wrap gap-2 justify-around items-center"><i class="fas fa-fire fa-2x"></i>Pompy Ciepła</a>
+        <a id="button2" href="piece.html" class="font-bold text-white bg-green-700 px-8 py-2 hover:bg-green-800 flex flex-wrap gap-2 justify-around items-center"><i class="fas fa-fire fa-2x"></i>Kotły</a>
+        <a id="button2" href="klima.html" class="font-bold text-white bg-green-700 px-8 py-2 hover:bg-green-800 flex flex-wrap gap-2 justify-around items-center"><i class="fas fa-snowflake fa-2x"></i>Klimatyzacje</a>
+        <a id="button2" href="klima.html" class="font-bold text-white bg-green-700 px-8 py-4 hover:bg-green-800 flex flex-wrap gap-1 justify-around items-center"><i class="fas fa-snowflake fa-2x"></i>instalacje wod-kan oraz c.o</a>
+        <a id="button2" href="klima.html" class="font-bold text-white bg-green-700 px-8 py-2 hover:bg-green-800 flex flex-wrap gap-2 justify-around items-center"><i class="fas fa-snowflake fa-2x"></i>Fotowoltaika</a>
+        <a id="button2" href="klima.html" class="font-bold text-white bg-green-700 px-8 py-2 hover:bg-green-800 flex flex-wrap gap-2 justify-around items-center"><i class="fas fa-snowflake fa-2x"></i>Rekuperacja</a>
+      </div>
+      <div class="">
+
+      </div>
+    </div>
+  </article>
+  <div class="bg-slate-200 py-20 reveal">
+    <div class="">
+      <h1 class="font-bold text-3xl text-center text-slate-500">Nasze Usługi:</h1>
+    </div>
+  </div>
+  <section id="uslugi" class="services py-72 bg-slate- reveal">
+    <div class="max-sm:flex max-sm:flex-wrap max-sm:gap-5 max-sm:justify-center max-sm:items-center flex justify-center items-center flex-wrap gap-2">
+      <button id="button-klima" onclick="switchTab('klima')" class="px-4 py-1 text-medium text-center text-xl bg-slate-200 rounded-sm hover:bg-slate-300 transition-all delay-150">Klimatyzacja</button>
+      <button id="button-pompy" onclick="switchTab('pompy')" class="px-4 py-1 text-medium text-center text-xl bg-slate-200 rounded-sm hover:bg-slate-300 transition-all delay-150">Pompy Ciepła</button>
+      <button id="button-piece" onclick="switchTab('piece')" class="px-4 py-1 text-medium text-center text-xl bg-slate-200 rounded-sm hover:bg-slate-300 transition-all delay-150">instalacje wod-kan oraz c.o</button>
+      <button id="button-pelet" onclick="switchTab('pelet')" class="px-4 py-1 text-medium text-center text-xl bg-slate-200 rounded-sm hover:bg-slate-300 transition-all delay-150">Kotły na pellet</button>
+      <button id="button-fotowoltaika" onclick="switchTab('fotowoltaika')" class="px-4 py-1 text-medium text-center text-xl bg-slate-200 rounded-sm hover:bg-slate-300 transition-all delay-150">Fotowoltaika</button>
+      <button id="button-rekuperacja" onclick="switchTab('rekuperacja')" class="px-4 py-1 text-medium text-center text-xl bg-slate-200 rounded-sm hover:bg-slate-300 transition-all delay-150">Rekuperacja</button>
+    </div>  
+    <div id="klima" class="service-grid flex justify-center items-center flex-wrap gap-10 px-22 py-10 hidden">
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">Klima</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div>     
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">Klima</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">Klima</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">Klima</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">Klima</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">Klima</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+    </div>
+    <div id="piece" class="service-grid flex justify-center items-center flex-wrap gap-10 px-22 py-10 hidden">
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">instalacje wod-kan oraz co</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">instalacje wod-kan oraz co</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">instalacje wod-kan oraz co</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">instalacje wod-kan oraz co</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">instalacje wod-kan oraz co</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">instalacje wod-kan oraz co</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">instalacje wod-kan oraz co</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+    </div>
+    <div id="pompy" class="service-grid flex justify-center items-center flex-wrap gap-10 px-22 py-10">
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">Pompy</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">Pompy</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">Pompy</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">Pompy</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">Pompy</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">Pompy</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">Pompy</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+    </div>
+    <div id="pelet" class="service-grid flex justify-center items-center flex-wrap gap-10 px-22 py-10">
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">pelet</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">pelet</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">pelet</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">pelet</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">pelet</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">pelet</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">pelet</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+    </div>
+    <div id="fotowoltaika" class="service-grid flex justify-center items-center flex-wrap gap-10 px-22 py-10">
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">fotowoltaika</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">fotowoltaika</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">fotowoltaika</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">fotowoltaika</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">fotowoltaika</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">fotowoltaika</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">fotowoltaika</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+    </div>
+    <div id="rekuperacja" class="service-grid flex justify-center items-center flex-wrap gap-10 px-22 py-10">
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">rekuperacja</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">rekuperacja</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">rekuperacja</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">rekuperacja</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">rekuperacja</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">rekuperacja</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+      <div id="div4" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-slate-100 dark:border-gray-300">
+        <img id="original-image4" class="rounded-t-lg" src="img/tlo.jpeg" alt="" />
+        <div class="p-5">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700 dark:text-slate-700">rekuperacja</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-700">Strony dedykowane dla urządzeń mobilnych.Większość stron posiada ta opcje ponieważ coraz więcej osób załatwia sprawy poprzez telefon/tablet.</p>
+          <a href="projekty.html" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-900 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Obczaj więcej
+              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          </a>
+        </div>
+      </div> 
+    </div>
+  </section>
+  <div id="opiss" class="bg-slate-100 py-20 reveal">
+    <div class="">
+      <h1 class="font-bold text-3xl text-center text-slate-500">Dane Techniczne:</h1>
+    </div>
+  </div>
+  <div id="" class="bg-white reveal">
+    <div class="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
+      <div>
+        <h2 class="text-3xl font-bold tracking-tight text-slate-800 sm:text-4xl">Nowoczesne Systemy Energetyczne</h2>
+        <p class="mt-4 font-medium text-slate-500">
+          Nasza oferta obejmuje innowacyjne rozwiązania w zakresie ogrzewania, chłodzenia i pozyskiwania energii. Oferujemy pompy ciepła, kotły, klimatyzacje oraz instalacje fotowoltaiczne – wszystko, czego potrzebujesz do komfortowego i ekologicznego domu.
+        </p>
+  
+        <dl class="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
+          <div class="border-t border-gray-200 pt-4">
+            <dt class="font-medium text-xl text-slate-700">Pompy ciepła</dt>
+            <dd class="mt-2 text-md text-slate-500">Wydajne i ekologiczne źródło ciepła oraz chłodzenia.</dd>
+          </div>
+  
+          <div class="border-t border-gray-200 pt-4">
+            <dt class="font-medium text-xl text-slate-700">Kotły</dt>
+            <dd class="mt-2 text-md text-slate-500">Nowoczesne piece gazowe i na pellet z wysoką sprawnością.</dd>
+          </div>
+  
+          <div class="border-t border-gray-200 pt-4">
+            <dt class="font-medium text-xl text-slate-700">Klimatyzacja</dt>
+            <dd class="mt-2 text-md text-slate-500">Systemy chłodząco-grzewcze do mieszkań i biur.</dd>
+          </div>
+  
+          <div class="border-t border-gray-200 pt-4">
+            <dt class="font-medium text-xl text-slate-700">Fotowoltaika</dt>
+            <dd class="mt-2 text-md text-slate-500">Panele słoneczne do produkcji energii elektrycznej z natury.</dd>
+          </div>
+  
+          <div class="border-t border-gray-200 pt-4">
+            <dt class="font-medium text-xl text-slate-700">Montaż i serwis</dt>
+            <dd class="mt-2 text-md text-slate-500">Kompleksowa obsługa – od projektu po instalację i opiekę serwisową.</dd>
+          </div>
+  
+          <div class="border-t border-gray-200 pt-4">
+            <dt class="font-medium text-xl text-slate-700">Finansowanie</dt>
+            <dd class="mt-2 text-md text-slate-500">Pomagamy w uzyskaniu dofinansowań i ulgi termomodernizacyjnej.</dd>
+          </div>
+        </dl>
+      </div>
+      <div class="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
+        <img src="img/tlo.jpeg" alt="Pompa ciepła przy domu jednorodzinnym" class="rounded-lg bg-slate-100">
+        <img src="img/tlo.jpeg" alt="Ekologiczny piec na pellet" class="rounded-lg bg-slate-100">
+        <img src="img/tlo.jpeg" alt="Nowoczesna klimatyzacja ścienna" class="rounded-lg bg-slate-100">
+        <img src="img/tlo.jpeg" alt="Instalacja fotowoltaiczna na dachu" class="rounded-lg bg-slate-100">
+      </div>
+    </div>
+  </div>
+  <div id="myy" class="bg-slate-100 py-20 reveal">
+    <div class="">
+      <h1 class="font-bold text-3xl text-center text-slate-500">Dlaczego My:</h1>
+    </div>
+  </div>
+  <article class="flex justify-around items-start flex-wrap gap-2 bg-slate-200 reveal">
+    <div class="bg-white flex justify-around items-start flex-wrap gap-2 w-full py-32">
+      <div class="flex flex-col justify-center items-start flex-wrap gap-10">
+        <h1 id="dlaczego" class="text-4xl font-bold text-green-900">Dlaczego Warto?</h1>
+        <div class="flex flex-col gap-2 items-start">
+          <div class="flex justify-center items-center flex-wrap gap-5"><svg width="24px" height="24px" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style> .cls-1 { fill: #699f4c; fill-rule: evenodd; } </style></defs><path class="cls-1" d="M800,510a30,30,0,1,1,30-30A30,30,0,0,1,800,510Zm-16.986-23.235a3.484,3.484,0,0,1,0-4.9l1.766-1.756a3.185,3.185,0,0,1,4.574.051l3.12,3.237a1.592,1.592,0,0,0,2.311,0l15.9-16.39a3.187,3.187,0,0,1,4.6-.027L817,468.714a3.482,3.482,0,0,1,0,4.846l-21.109,21.451a3.185,3.185,0,0,1-4.552.03Z" id="check" transform="translate(-770 -450)"></path></g></svg><p class="font-medium text-lg">Doświadczenie i Cerfytikaty</p></div>
+          <div class="flex justify-center items-center flex-wrap gap-5"><svg width="24px" height="24px" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style> .cls-1 { fill: #699f4c; fill-rule: evenodd; } </style></defs><path class="cls-1" d="M800,510a30,30,0,1,1,30-30A30,30,0,0,1,800,510Zm-16.986-23.235a3.484,3.484,0,0,1,0-4.9l1.766-1.756a3.185,3.185,0,0,1,4.574.051l3.12,3.237a1.592,1.592,0,0,0,2.311,0l15.9-16.39a3.187,3.187,0,0,1,4.6-.027L817,468.714a3.482,3.482,0,0,1,0,4.846l-21.109,21.451a3.185,3.185,0,0,1-4.552.03Z" id="check" transform="translate(-770 -450)"></path></g></svg><p class="font-medium text-lg">Indywidualne podejście</p></div>
+        </div>
+      </div>
+      <div class="flex flex-col justify-center items-center flex-wrap gap-4">
+        <div class="flex justify-center items-center flex-wrap gap-5"><svg width="24px" height="24px" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style> .cls-1 { fill: #699f4c; fill-rule: evenodd; } </style></defs><path class="cls-1" d="M800,510a30,30,0,1,1,30-30A30,30,0,0,1,800,510Zm-16.986-23.235a3.484,3.484,0,0,1,0-4.9l1.766-1.756a3.185,3.185,0,0,1,4.574.051l3.12,3.237a1.592,1.592,0,0,0,2.311,0l15.9-16.39a3.187,3.187,0,0,1,4.6-.027L817,468.714a3.482,3.482,0,0,1,0,4.846l-21.109,21.451a3.185,3.185,0,0,1-4.552.03Z" id="check" transform="translate(-770 -450)"></path></g></svg><p class="font-medium text-lg">Wsparcie od projektu po serwis</p></div>
+        <div class="flex justify-center items-center flex-wrap gap-5"><svg width="24px" height="24px" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style> .cls-1 { fill: #699f4c; fill-rule: evenodd; } </style></defs><path class="cls-1" d="M800,510a30,30,0,1,1,30-30A30,30,0,0,1,800,510Zm-16.986-23.235a3.484,3.484,0,0,1,0-4.9l1.766-1.756a3.185,3.185,0,0,1,4.574.051l3.12,3.237a1.592,1.592,0,0,0,2.311,0l15.9-16.39a3.187,3.187,0,0,1,4.6-.027L817,468.714a3.482,3.482,0,0,1,0,4.846l-21.109,21.451a3.185,3.185,0,0,1-4.552.03Z" id="check" transform="translate(-770 -450)"></path></g></svg><p class="font-medium text-lg">Wsparcie od projektu po serwis</p></div>
+        <div class="flex justify-center items-center flex-wrap gap-5"><svg width="24px" height="24px" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style> .cls-1 { fill: #699f4c; fill-rule: evenodd; } </style></defs><path class="cls-1" d="M800,510a30,30,0,1,1,30-30A30,30,0,0,1,800,510Zm-16.986-23.235a3.484,3.484,0,0,1,0-4.9l1.766-1.756a3.185,3.185,0,0,1,4.574.051l3.12,3.237a1.592,1.592,0,0,0,2.311,0l15.9-16.39a3.187,3.187,0,0,1,4.6-.027L817,468.714a3.482,3.482,0,0,1,0,4.846l-21.109,21.451a3.185,3.185,0,0,1-4.552.03Z" id="check" transform="translate(-770 -450)"></path></g></svg><p class="font-medium text-lg">Wsparcie od projektu po serwis</p></div>
+        <div class="flex justify-center items-center flex-wrap gap-5"><svg width="24px" height="24px" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style> .cls-1 { fill: #699f4c; fill-rule: evenodd; } </style></defs><path class="cls-1" d="M800,510a30,30,0,1,1,30-30A30,30,0,0,1,800,510Zm-16.986-23.235a3.484,3.484,0,0,1,0-4.9l1.766-1.756a3.185,3.185,0,0,1,4.574.051l3.12,3.237a1.592,1.592,0,0,0,2.311,0l15.9-16.39a3.187,3.187,0,0,1,4.6-.027L817,468.714a3.482,3.482,0,0,1,0,4.846l-21.109,21.451a3.185,3.185,0,0,1-4.552.03Z" id="check" transform="translate(-770 -450)"></path></g></svg><p class="font-medium text-lg">Wsparcie od projektu po serwis</p></div>
+      </div>
+    </div>
+  </article>
+  <div id="dojazd" class="bg-slate-100 py-20 reveal">
+    <div class="">
+      <h1 class="font-bold text-3xl text-center text-slate-500">Lokalizacja:</h1>
+    </div>
+  </div>
+  <aside class="py-20 reveal">
+    <div class="flex justify-around items-center flex-wrap">
+      <div class="flex flex-col justify-center items-start flex-wrap gap-1">
+        <h1 class="font-bold text-green-900 text-4xl">Nasza Lokalizacja:</h1>
+        <div class="flex flex-col justify-center items-start flex-wrap gap-2">
+          <h1 class="font-bold text-green-900 text-3xl sm:text-xl lg:text-2xl">Adres</h1>
+          <p class="font-medium text-green-900 text-xl">I mapa dojazdu:</p>
+          <p class="font-medium text-green-900 text-md">Adamki 27</p>
+          <p class="font-medium text-green-900 text-md">Kod Pocztowy zbójno</p>
+        </div>
+      </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d76835.09471405033!2d18.96933317184448!3d53.00064543602239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471cc3b30d698539%3A0xe09d4cc7c65f1979!2sAdamki%2027%2C%2087-645%20Adamki!5e0!3m2!1spl!2spl!4v1745696857031!5m2!1spl!2spl" width="750" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </aside>
+  <footer id="footer" class="flex flex-col justify- items- flex-wrap gap-2 bg-slate-00 reveal border-2 border-slate-300">
+    <div class="flex justify-around items-center flex-wrap py-10 max-sm:gap-1">
+      <div class="flex flex-col gap-5 flex-wrap justify-center items-center">
+        <h1 class="font-bold text-2xl text-green-900">Firma</h1>
+        <img src="img/453410485_122159510768173002_812049489357826685_n.jpg">
+      </div>
+      <div class="">
+        <h1 class="font-medium text-2xl text-green-900">Menu:</h1>
+        <div class="flex flex-col">
+          <a href="" class="text-lg font-medium hover:text-green-800 transition-all delay-150 flex justify-center items-center gap-2"><p class="text-md font-medium">--></p>Strona Główna</a>  
+          <div class="flex flex-col">
+            <h1 class="font-medium text-2xl text-green-900">Oferta:</h1>
+            <a href="" class="text-lg font-medium hover:text-green-800 transition-all delay-150 flex justify-center items-center gap-2"><p class="text-md font-medium">--></p>Oferta</a>
+            <a href="" class="text-lg font-medium hover:text-green-800 transition-all delay-150 flex justify-center items-center gap-2"><p class="text-md font-medium">--></p>Usługi</a>
+            <a href="" class="text-lg font-medium hover:text-green-800 transition-all delay-150 flex justify-center items-center gap-2"><p class="text-md font-medium">--></p>Klimatyzacje</a>
+            <a href="" class="text-lg font-medium hover:text-green-800 transition-all delay-150 flex justify-center items-center gap-2"><p class="text-md font-medium">--></p>Pompy Ciepła</a>
+            <a href="" class="text-lg font-medium hover:text-green-800 transition-all delay-150 flex justify-center items-center gap-2"><p class="text-md font-medium">--></p>Piece</a>
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <h1 class="font-medium text-2xl text-green-900">Kontakt:</h1>
+        <div class="flex flex-col">
+          <a href="" class="text-lg font-medium hover:text-green-800 transition-all delay-150 flex justify-center items-center gap-2"><p class="text-md font-medium">--></p>Numer Telefonu</a>
+          <a href="" class="text-lg font-medium hover:text-green-800 transition-all delay-150 flex justify-center items-center gap-2"><p class="text-md font-medium">--></p>Adres Mailowy</a>
+          <a href="" class="text-lg font-medium hover:text-green-800 transition-all delay-150 flex justify-center items-center gap-2"><p class="text-md font-medium">--></p>Facebook</a>
+          <h1 class="font-medium text-green-900 text-3xl sm:text-xl lg:text-2xl">Adres:</h1>
+          <p class="font-medium text-slate-900 text-xl">I mapa dojazdu:</p>
+          <p class="font-medium text-slate-900 text-md">Adamki 27</p>
+          <p class="font-medium text-slate-900 text-md">Kod Pocztowy zbójno</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center bg-slate-100 h-full w-full py-2 border-2 border-t-slate-300">
+      <h1>© 2025 All Rights Reserved.</h1>
+    </div>
+  </footer>
+</body>
+</html>

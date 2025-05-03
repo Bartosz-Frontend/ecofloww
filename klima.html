@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+  <header id="home" class="relative bg-white overflow-hidden ">
+    <nav id="navbar" class="relative container mx-auto flex items-center justify-between px-4 py-5">
+      <a href="#home" class="flex items-center space-x-2 z-10">
+        <img src="img/453410485_122159510768173002_812049489357826685_n.jpg" class="w-20">
+        <span class="text-2xl font-bold text-green-900">EcoFlow</span>
+      </a>
+      <div class="hidden lg:flex space-x-8 z-10">
+        <a href="index.html"       class="text-lg font-medium hover:text-green-600 transition bg-green-900 text-white px-4 py-1 rounded-md">Strona główna</a>
+        <a href="pompy.html"     class="text-lg font-medium hover:text-green-600 transition bg-green-900 text-white px-4 py-1 rounded-md">Pompy Ciepła</a>
+        <a href="piece.html" class="text-lg font-medium hover:text-green-600 transition bg-green-900 text-white px-4 py-1 rounded-md">Piece</a>
+      </div>
+      <button
+        class="lg:hidden text-blue-900 focus:outline-none z-10"
+        onclick="toggleNavbar('mobile-menu')"
+      >
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden flex-col items-center space-y-4 bg-white py-5 lg:hidden">
+      <a href="#onas"       class="text-lg font-medium hover:text-green-600 transition bg-green-900 text-white px-4 py-1 rounded-md">O nas</a>
+      <a href="#uslugi"     class="text-lg font-medium hover:text-green-600 transition bg-green-900 text-white px-4 py-1 rounded-md">Usługi</a>
+      <a href="#realizacje" class="text-lg font-medium hover:text-green-600 transition bg-green-900 text-white px-4 py-1 rounded-md">Realizacje</a>
+      <a href="#opinie"     class="text-lg font-medium hover:text-green-600 transition bg-green-900 text-white px-4 py-1 rounded-md">Opinie</a>
+      <a href="#kontakt"    class="text-lg font-medium hover:text-green-600 transition bg-green-900 text-white px-4 py-1 rounded-md">Kontakt</a>
+    </div>
+    <div id="powrot" class="fixed bottom-5 right-5 z-50">
+      <a href="#home" class="bg-slate-100 p-4 rounded-full shadow-lg text-black text-2xl hover:bg-slate-200 transition">
+        <i class="fas fa-arrow-up"></i>
+      </a>
+    </div>
+  </header>
+  <main id="main" class="py-32">
+    <div class="">
+        <div class="flex flex-col justify-center items-center flex-wrap">
+            <h1 class="font-medium text-5xl text-slate-800 text-center">Klimatyzacje</h1>
+            <div class="flex justify-center items-center flex-wrap gap-2 flex-col">
+                <div class="py-10 flex flex-col justify-center items-center flex-wrap gap-5">
+                    <img src="img/tlo.jpeg">
+                    <p id="opis" class="text-center font-medium text-xl">Klimatyzacja to system, który umożliwia regulację temperatury, wilgotności i jakości powietrza w pomieszczeniu, zapewniając komfort termiczny niezależnie od warunków zewnętrznych. Działa poprzez chłodzenie, ogrzewanie lub wentylację powietrza.</p>
+                </div>
+                <div id="boxx" class="flex justify-center items-center flex-wrap gap-5 reveal">
+                    <div id="imgklima" class="border-2 border-slate-300 rounded-md px-5 py-2">
+                        <img src="img/453410485_122159510768173002_812049489357826685_n.jpg">
+                    </div>
+                    <div id="imgklima" class="border-2 border-slate-300 rounded-md px-5 py-2">
+                        <img src="img/453410485_122159510768173002_812049489357826685_n.jpg">
+                    </div>
+                    <div id="imgklima" class="border-2 border-slate-300 rounded-md px-5 py-2">
+                        <img src="img/453410485_122159510768173002_812049489357826685_n.jpg">
+                    </div>
+                    <div id="imgklima" class="border-2 border-slate-300 rounded-md px-5 py-2">
+                        <img src="img/453410485_122159510768173002_812049489357826685_n.jpg">
+                    </div>
+                    <div id="imgklima" class="border-2 border-slate-300 rounded-md px-5 py-2">
+                        <img src="img/453410485_122159510768173002_812049489357826685_n.jpg">
+                    </div>
+                    <div id="imgklima" class="border-2 border-slate-300 rounded-md px-5 py-2">
+                        <img src="img/453410485_122159510768173002_812049489357826685_n.jpg">
+                    </div>
+                    <div id="imgklima" class="border-2 border-slate-300 rounded-md px-5 py-2">
+                        <img src="img/453410485_122159510768173002_812049489357826685_n.jpg">
+                    </div>
+                    <div id="imgklima" class="border-2 border-slate-300 rounded-md px-5 py-2">
+                        <img src="img/453410485_122159510768173002_812049489357826685_n.jpg">
+                    </div>
+                    <div id="imgklima" class="border-2 border-slate-300 rounded-md px-5 py-2">
+                        <img src="img/453410485_122159510768173002_812049489357826685_n.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </main>
+  <footer id="footer" class="flex flex-col justify- items- flex-wrap gap-2 bg-slate-00 reveal border-2 border-slate-300">
+    <div class="flex justify-around items-center flex-wrap py-10 max-sm:gap-1">
+      <div class="flex flex-col gap-5 flex-wrap justify-center items-center">
+        <h1 class="font-bold text-2xl text-green-900">Firma</h1>
+        <img src="img/453410485_122159510768173002_812049489357826685_n.jpg">
+      </div>
+      <div class="">
+        <h1 class="font-medium text-2xl text-green-900">Menu:</h1>
+        <div class="flex flex-col">
+          <a href="" class="text-lg font-medium hover:text-green-800 transition-all delay-150 flex justify-center items-center gap-2"><p class="text-md font-medium">--></p>Strona Główna</a>  
+          <div class="flex flex-col">
+            <h1 class="font-medium text-2xl text-green-900">Oferta:</h1>
+            <a href="" class="text-lg font-medium hover:text-green-800 transition-all delay-150 flex justify-center items-center gap-2"><p class="text-md font-medium">--></p>Oferta</a>
+            <a href="" class="text-lg font-medium hover:text-green-800 transition-all delay-150 flex justify-center items-center gap-2"><p class="text-md font-medium">--></p>Usługi</a>
+            <a href="" class="text-lg font-medium hover:text-green-800 transition-all delay-150 flex justify-center items-center gap-2"><p class="text-md font-medium">--></p>Klimatyzacje</a>
+            <a href="" class="text-lg font-medium hover:text-green-800 transition-all delay-150 flex justify-center items-center gap-2"><p class="text-md font-medium">--></p>Pompy Ciepła</a>
+            <a href="" class="text-lg font-medium hover:text-green-800 transition-all delay-150 flex justify-center items-center gap-2"><p class="text-md font-medium">--></p>Piece</a>
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <h1 class="font-medium text-2xl text-green-900">Kontakt:</h1>
+        <div class="flex flex-col">
+          <a href="" class="text-lg font-medium hover:text-green-800 transition-all delay-150 flex justify-center items-center gap-2"><p class="text-md font-medium">--></p>Numer Telefonu</a>
+          <a href="" class="text-lg font-medium hover:text-green-800 transition-all delay-150 flex justify-center items-center gap-2"><p class="text-md font-medium">--></p>Adres Mailowy</a>
+          <a href="" class="text-lg font-medium hover:text-green-800 transition-all delay-150 flex justify-center items-center gap-2"><p class="text-md font-medium">--></p>Facebook</a>
+          <h1 class="font-medium text-green-900 text-3xl sm:text-xl lg:text-2xl">Adres:</h1>
+          <p class="font-medium text-slate-900 text-xl">I mapa dojazdu:</p>
+          <p class="font-medium text-slate-900 text-md">Adamki 27</p>
+          <p class="font-medium text-slate-900 text-md">Kod Pocztowy zbójno</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center bg-slate-100 h-full w-full py-2 border-2 border-t-slate-300">
+      <h1>© 2025 All Rights Reserved.</h1>
+    </div>
+  </footer>
+</body>
+</html>
